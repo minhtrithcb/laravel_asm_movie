@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Raven</title>
+    <link rel="icon" href="img/logo2.png" type="image" sizes="16x16">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- === opening header === -->
+    <div class="wrap-fix">
+        <header class="container">
+            <div class="row">
+                <div class="logo col-2 d-flex  align-items-center">
+                    <a href="/"><img src="img/logo2.png" alt=""></a>
+                </div>
+                <nav class="col-4">
+                    <ul class="nav-menu d-flex justify-content-between" style="margin-bottom: 0;">
+                        <li><a href="" class="a-w">Mới nhất</a></li>
+                        <li><a href="" class="a-w">Đăng kí</a></li>
+                        <li><a href="" class="a-w">Miễn phí</a></li>
+                        <li><a href="" class="a-w">Thể loại</a></li>
+                    </ul>
+                </nav>
+                <div class="side-bar col-6 d-flex justify-content-end align-items-center">
+                    <div class="col-2 d-flex justify-content-between align-items-center">
+                        <div class="sidebar-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x icon-hide" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                        </div>
+                        <div class="search-box">
+                            <div class="d-flex align-items-center">
+                                <input type="text" placeholder="Tìm kiếm: Movie, tv show, ...">
+                                <a href="http://" ><div class="btn btn-danger mb-1 rounded-0" style="height: 40px;">Tìm </div></a>
+                            </div>
+                            
+                            <ul class="shadow">
+                                <li><a href="/" class="a-b">Record 1</a></li>
+                                <li><a href="/" class="a-b">Record 1</a></li>
+                                <li><a href="/" class="a-b">Record 1</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
+                                <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+                              </svg>
+                            <ul class="sidebar-ul shadow">
+                                <li><a href="/" class="a-b">Hồ sơ</a></li>
+                                <li><a href="/" class="a-b">Danh sách phát</a></li>
+                                <li><a href="/" class="a-b">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- === close header === -->
+
+    <!-- === opening banner === -->
+    <div class="banner">
+        <div class="banner-slides">
+            <div class="banner-slide-item banner-slide-item-active">
+                <div class="banner-main-img">
+                    <div class="over-lay"></div>
+                    <img src="img/maxresdefault.jpg" alt="">
+                </div>
+                <div class="banner-main-content">
+                    <div class="banner-main-l">
+                        <span class="badge bg-danger">New</span>
+                        <p class="main-name"><a href="/" class="a-w">John wick 1</a></p>
+                        <small class="main-desc">
+                            With the untimely death of his beloved wife still bitter in his mouth, John Wick, the expert former assassin, receives one final gift from her--a precious keepsake to help John find ...
+                        </small>
+                        <b class="main-genres">Genres: </b> Action | Crime | Thriller
+                        <div class="main-rating d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                              <p>7,4 /</p> <p style="color: white;"> 10</p>
+                        </div>
+                        <div class="main-btn">
+                            <div class="btn btn-danger">
+                                <a href="/" class="a-w">Watch Now</a>
+                            </div>
+                            <div class="btn btn-dark"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                                <a href="/" class="a-w">Add to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slide-item ">
+                <div class="banner-main-img">
+                    <div class="over-lay"></div>
+                    <img src="img/us.jpg" alt="">
+                </div>
+                <div class="banner-main-content">
+                    <div class="banner-main-l">
+                        <span class="badge bg-danger">New</span>
+                        <p class="main-name"><a href="/" class="a-w">John wick 3</a></p>
+                        <small class="main-desc">
+                            With the untimely death of his beloved wife still bitter in his mouth, John Wick, the expert former assassin, receives one final gift from her--a precious keepsake to help John find ...
+                        </small>
+                        <b class="main-genres">Genres: </b> Action | Crime | Thriller
+                        <div class="main-rating d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                              <p>7,4 /</p> <p style="color: white;"> 10</p>
+                        </div>
+                        <div class="main-btn">
+                            <div class="btn btn-danger">
+                                <a href="/" class="a-w">Watch Now</a>
+                            </div>
+                            <div class="btn btn-dark"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                                <a href="/" class="a-w">Add to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slide-item  ">
+                <div class="banner-main-img">
+                    <div class="over-lay"></div>
+                    <img src="img/joke.jpg" alt="">
+                </div>
+                <div class="banner-main-content">
+                    <div class="banner-main-l">
+                        <span class="badge bg-danger">New</span>
+                        <p class="main-name"><a href="/" class="a-w">John wick 2</a></p>
+                        <small class="main-desc">
+                            With the untimely death of his beloved wife still bitter in his mouth, John Wick, the expert former assassin, receives one final gift from her--a precious keepsake to help John find ...
+                        </small>
+                        <b class="main-genres">Genres: </b> Action | Crime | Thriller
+                        <div class="main-rating d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                              <p>7,4 /</p> <p style="color: white;"> 10</p>
+                        </div>
+                        <div class="main-btn">
+                            <div class="btn btn-danger">
+                                <a href="/" class="a-w">Watch Now</a>
+                            </div>
+                            <div class="btn btn-dark"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                                <a href="/" class="a-w">Add to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="banner-slide-item ">
+                <div class="banner-main-img">
+                    <div class="over-lay"></div>
+                    <img src="img/1917.jpg" alt="">
+                </div>
+                <div class="banner-main-content">
+                    <div class="banner-main-l">
+                        <span class="badge bg-danger">New</span>
+                        <p class="main-name"><a href="/" class="a-w">John wick 4</a></p>
+                        <small class="main-desc">
+                            With the untimely death of his beloved wife still bitter in his mouth, John Wick, the expert former assassin, receives one final gift from her--a precious keepsake to help John find ...
+                        </small>
+                        <b class="main-genres">Genres: </b> Action | Crime | Thriller
+                        <div class="main-rating d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                              <p>7,4 /</p> <p style="color: white;"> 10</p>
+                        </div>
+                        <div class="main-btn">
+                            <div class="btn btn-danger">
+                                <a href="/" class="a-w">Watch Now</a>
+                            </div>
+                            <div class="btn btn-dark"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                                <a href="/" class="a-w">Add to list</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-main-r d-flex align-items-end">
+            <div class="main-navi">
+                <div class="" id="prev" onclick="prevSlide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                      </svg>
+                </div>
+                <div class="" id="next" onclick="nextSlide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                      </svg>
+                </div>
+            </div>
+
+            <div class="main-mini-carts">
+                <div class="main-mini-cart main-mini-cart-active">
+                    <img src="img/71WiYBT2QsL._AC_SY741_.jpg" alt="">
+                    <div class="mini-cart-content"><a href="" class="a-w">John wick</a></div>
+                </div>
+                <div class="main-mini-cart">
+                    <img src="img/91jatiUZjtL._AC_SL1500_.jpg" alt="">
+                    <div class="mini-cart-content"><a href="" class="a-w">Us</a></div>
+                </div>
+                <div class="main-mini-cart">
+                    <img src="img/joker_full.jpg" alt="">
+                    <div class="mini-cart-content"><a href="" class="a-w">Joker</a></div>
+                </div>
+                <div class="main-mini-cart">
+                    <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                    <div class="mini-cart-content"><a href="" class="a-w">Joker</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === close banner === -->
+
+    <!-- === opening content === -->
+    <section class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b class="col">PHIM HOT</b>
+                    <span class="d-flex align-items-center  justify-content-between" >
+                        <ul class="d-flex  justify-content-between" style="margin: 0; list-style: none;">
+                            <li><a href="a-w" class="a-w">Phim Hot</a></li>
+                            <li><a href="a-w" class="a-w" style="margin: 0 10px;">Phim lẻ</a></li>
+                            <li><a href="a-w" class="a-w">TV Show</a></li>
+                        </ul>
+                        <a href="" class="btn btn-danger" style="margin-left: 10px; padding: 0 5px; font-size: 0.9rem;">xem tất cả</a>
+                    </span>
+                </div>
+                <div class="movies-container">
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b>PHIM HOT TRONG TUẦN</b>
+                </div>
+                <div class="movie-sidebar">
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">01</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">02</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">03</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">04</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">05</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">06</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">07</div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <!-- ==== close content ==== -->
+
+    <!-- === opening content === -->
+    <section class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b>PHIM BỘ</b>
+                    <span class="d-flex align-items-center">
+                        <p class="m-0" style="color: gray;">1101</p>
+                        <a href="" class="btn btn-danger" style="margin-left: 10px; padding: 0 5px; font-size: 0.9rem;">xem tất cả</a>
+                    </span>
+                </div>
+                <div class="movies-container">
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b>TOP PHIM CHIẾU RẠP</b>
+                </div>
+                <div class="movie-sidebar">
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">01</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">02</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">03</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">04</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">05</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">06</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">07</div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <!-- ==== close content ==== -->
+
+    <!-- === opening content === -->
+    <section class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b>PHIM CHIẾU RẠP</b>
+                    <span class="d-flex align-items-center">
+                        <p class="m-0" style="color: gray;">1101</p>
+                        <a href="" class="btn btn-danger" style="margin-left: 10px; padding: 0 5px; font-size: 0.9rem;">xem tất cả</a>
+                    </span>
+                </div>
+                <div class="movies-container">
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="movie-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="movie-ratingavg">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                            8.3</div>
+                        <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                        <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        <div class="movie-popup">
+                            <div class="p-2">Trận Chiến Năm 1917</div>
+                            <div class="popup-imdb d-flex align-items-center justify-content-around">
+                                <span class="btn btn-dark">IMDB: 7.9</span>
+                                <small>2019</small>
+                                <small>119 phút</small>
+                                <small>600 lượt xem</small>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #95a5a6;">Bộ phim “1917” kể về hai binh sĩ Anh trong Chiến tranh Thế giới thứ nhất (do George MacKay và ...
+                                </p>
+                            </div>
+                            <ul class="popup-genres">
+                                <li><a href="" class="a-w">Hành động</a></li>
+                                <li><a href="" class="a-w">Giật gân</a></li>
+                                <li><a href="" class="a-w">Tâm lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="content-navi d-flex justify-content-between align-items-center">
+                    <b>TOP PHIM TRUYỀN HÌNH</b>
+                </div>
+                <div class="movie-sidebar">
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">01</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">02</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">03</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">04</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">05</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">06</div>
+                    </div>
+                    <div class="movie-sidebar-item">
+                        <div class="movie-img">
+                            <img src="img/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg" alt="">
+                        </div>
+                        <div class="sidebar-item-content">
+                            <div class="movie-title p-2"><a href="" class="a-w">Trận chiến năm 1917</a></div>
+                            <small class="movie-year p-2" style="color: #95a5a6;">Nov-13-2020</small>
+                        </div>
+                        <div class="sidebar-number">07</div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <!-- ==== close content ==== -->
+
+    <!-- -----opening footer -----  -->
+    <footer>
+        <ul>
+            <b>Thắt mắt? Liên hệ chúng tôi</b>
+            <li><a href="#" class="a-w">FAQ</a></li>
+            <li><a href="#" class="a-w">Quan hệ đầu tư</a></li>
+            <li><a href="#" class="a-w">Privacy</a></li>
+            <li><a href="#" class="a-w">Kiểm tra tốc độ</a></li>
+        </ul>
+
+        <ul>
+            <b>Trung tâm chăm sóc khách hàng</b>
+            <li><a href="#" class="a-w">Hỗ trợ</a></li>
+            <li><a href="#" class="a-w">Tuyển dụng</a></li>
+            <li><a href="#" class="a-w">Tùy chọn cookie</a></li>
+            <li><a href="#" class="a-w">Thông báo pháp lý</a></li>
+        </ul>
+
+        <ul>
+            <b>Tài khoản</b>
+            <li><a href="#" class="a-w">Terms of Use</a></li>
+            <li><a href="#" class="a-w">Cách xem</a></li>
+            <li><a href="#" class="a-w">Thông tin công ty</a></li>
+            <li><a href="#" class="a-w">Raven Bản gốc</a></li>
+        </ul>
+
+        <ul>
+            <b>Đăng ký</b>
+            <li><a href="#" class="a-w">Trở thành thành viên</a></li>
+            <li><a href="#" class="a-w">Tham gia ngay bây giờ và được giảm giá 10% cho lần mua hàng tiếp theo của bạn!</a></li>
+        </ul>
+        <ul>
+            <b>Theo dõi chúng tôi</b>
+            <li><a href="#" class="a-w"><i class="fab fa-facebook-square"></i>facebook</a></li>
+            <li><a href="#" class="a-w"><i class="fab fa-instagram"></i>instagram</a></li>
+            <li><a href="#" class="a-w"><i class="fab fa-tumblr-square"></i>tumblr</a></li>
+            <li><a href="#" class="a-w"><i class="fab fa-twitter-square"></i>twitter</a></li>
+        </ul>
+    </footer>
+    <!-- -----close footer -----  -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</html>
