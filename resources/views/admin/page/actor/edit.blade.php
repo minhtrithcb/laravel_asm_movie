@@ -13,7 +13,7 @@
 @section('content')
 <div class="main-content-inner">
     <div class="  mt-3">
-        <a href="admin/actorector"><button class="btn btn-primary">Trở về</button></a>
+        <a href="admin/actor"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <div class="row mt-3">
         <div class="col">
@@ -52,8 +52,8 @@
                                     @error('chieucao') <small style="color: #e74c3c">{{$message }}</small>@enderror
                                 </div>
           
-                                  <div class="form-group">
-                                      <label for="img" class="form-label">Hình cũ</label>
+                                  <div class="form-group ">
+                                      <label for="img" class="form-label d-block">Hình cũ</label>
                                       <img src="{{ asset('storage/img/'.$actor->image) }}" id="img" alt="{{$actor->image}}" width="200px">
                                   </div>
                             </div>
