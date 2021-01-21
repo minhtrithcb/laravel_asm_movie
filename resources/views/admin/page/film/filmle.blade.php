@@ -118,6 +118,24 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
+                                                    <div class="">Thể loại:</div>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" 
+                                                                id="dropdownMenu1" data-toggle="dropdown" 
+                                                                aria-haspopup="true" aria-expanded="true">
+                                                          <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+                                                            @foreach ($genres as $key => $item)
+                                                            <li ><span>
+                                                                <input type="checkbox" value="{{$item->id}}" id="check{{$key}}" name="theloai[]">
+                                                                <label style="display: inline" class="form-check-label" for="check{{$key}}">{{$item->name}}</label>
+                                                            </span></li>
+                                                          @endforeach
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
                                                     <div class="">Đạo diễn</div>
                                                     <select class="form-control" name="daodien">
                                                         @foreach ($dir as $key => $item)

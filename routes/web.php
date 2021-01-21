@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActorController;
 use App\Http\Controllers\FilmBoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FilmLeController;
@@ -37,7 +38,10 @@ Route::group(['prefix' => 'admin'], function() {
     Route::resource('genres', GenresController::class);    
 
     // Quản lý thông tin đạo diễn
-    Route::resource('director', DirController::class);    
+    Route::resource('director', DirController::class);   
+
+    // Quản lý thông tin diễn viên
+    Route::resource('actor', ActorController::class);    
 });
 
 

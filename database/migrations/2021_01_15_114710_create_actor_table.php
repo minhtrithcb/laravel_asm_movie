@@ -23,7 +23,7 @@ class CreateActorTable extends Migration
             $table->string('height');
             $table->string('weight');
             $table->string('image')->nullable();
-            $table->integer('view');
+            $table->integer('view')->default(0);
             $table->string('active')->default(1);        
         });
     }

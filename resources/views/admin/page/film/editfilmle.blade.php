@@ -73,65 +73,63 @@
 
                             <div class="col">
                                 
-        
-                                <div class="form-group">
-                                    <label class="form-label">Hình poster Cũ</label>
-                                    <img src="{{ asset('storage/img/'.$film->poster) }}" alt="{{$film->poster}}" width="200px" class="ml-5">
-                                </div>
-        
-                                <div class="form-group">
-                                    <label class="form-label">Hình wallpaper Cũ</label>
-                                    <img src="{{ asset('storage/img/'.$film->wallpaper) }}" alt="{{$film->wallpaper}}" width="200px" class="ml-5">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="poster" class="form-label">Hình ảnh poster</label>
-                                    <input class="form-control" type="file" name="poster" id="poster">
+                                <div class="row d-flex justify-content-between" style="padding: 20px">
+                                    <div class="form-group" style="width: 30%; ">
+                                        <label class="form-label d-block">Hình poster Cũ</label>
+                                        <img src="{{ asset('storage/img/'.$film->poster) }}" alt="{{$film->poster}}" style="height: 230px">
+                                    </div>
+            
+                                    <div class="form-group" style="width: 68%;">
+                                        <label class="form-label d-block">Hình wallpaper Cũ</label>
+                                        <img src="{{ asset('storage/img/'.$film->wallpaper) }}" alt="{{$film->wallpaper}}" style="height: 230px">
+                                    </div>
                                 </div>
                                 
+
+                                <div class="form-group">
+                                    <label for="poster" class="form-label" >Hình ảnh poster</label>
+                                    <input class="form-control" type="file" name="poster" id="poster">
+                                </div>
+
                                 <div class="form-group">
                                     <label for="wallpaper" class="form-label">Hình ảnh wallpaper</label>
                                     <input class="form-control" type="file" name="wallpaper" id="wallpaper">
                                 </div>
-                            </div>
-                        </div>
 
-                        
-
-                        
-
-                        <div class="form-group">
-                            <div class="">Đạo diễn</div>
-                            <select class="form-control" name="daodien">
-                                @foreach ($dir as $key => $item)
-                                    @if ($item->id == $film->dir_id)
-                                        <option value="{{$item->id}}" selected>{{$item->name}}</option>
-                                    @else
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="">Thể loại:</div>
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" 
-                                        id="dropdownMenu1" data-toggle="dropdown" 
-                                        aria-haspopup="true" aria-expanded="true">
-                                  <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
-                                    @foreach ($gen as $key => $item)                                            
-                                        <li ><span>
-                                            <input type="checkbox" value="{{$item->id}}" id="check{{$key}}" name="theloai[]" 
-                                            @foreach ($filmgenres as $i)
-                                                @if ($i->id == $item->id) checked @endif  
-                                            @endforeach >
-                                            <label style="display: inline" class="form-check-label" for="check{{$key}}">{{$item->name}}</label>
-                                        </span></li> 
-                                    @endforeach
-                                </ul>
+                                <div class="form-group">
+                                    <label class="">Đạo diễn</label>
+                                    <select class="form-control" name="daodien">
+                                        @foreach ($dir as $key => $item)
+                                            @if ($item->id == $film->dir_id)
+                                                <option value="{{$item->id}}" selected>{{$item->name}}</option>
+                                            @else
+                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label class="">Thể loại:</label>
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" 
+                                                id="dropdownMenu1" data-toggle="dropdown" 
+                                                aria-haspopup="true" aria-expanded="true">
+                                          <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+                                            @foreach ($gen as $key => $item)                                            
+                                                <li ><span>
+                                                    <input type="checkbox" value="{{$item->id}}" id="check{{$key}}" name="theloai[]" 
+                                                    @foreach ($filmgenres as $i)
+                                                        @if ($i->id == $item->id) checked @endif  
+                                                    @endforeach >
+                                                    <label style="display: inline" class="form-check-label" for="check{{$key}}">{{$item->name}}</label>
+                                                </span></li> 
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

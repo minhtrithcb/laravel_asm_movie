@@ -20,6 +20,10 @@
         <li  class="{{ 'admin/director' == request()->path() ? 'active' : ''}}">
             <a href="admin/director" aria-expanded="true"><i class="ti-receipt"></i><span>Quản lí đạo diễn</span></a>
         </li>
+
+        <li  class="{{ 'admin/actor' == request()->path() ? 'active' : ''}}">
+            <a href="admin/actor" aria-expanded="true"><i class="ti-pie-chart"></i><span>Quản lí diễn viên</span></a>
+        </li>
         
         <li>
             <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
