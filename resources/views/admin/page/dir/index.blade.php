@@ -53,7 +53,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="namsinh" class="form-label">Năm sinh</label>
-                                                        <input type="number" class="form-control" id="namsinh" name="namsinh" value="{{old('namsinh')}}">
+                                                        <input type="date" class="form-control" id="namsinh" name="namsinh" value="{{old('namsinh')}}">
                                                         @error('namsinh') <small style="color: #e74c3c">{{$message }}</small>@enderror
                                                     </div>
                                                     <div class="form-group">
@@ -111,7 +111,7 @@
                                         <th scope="row">{{$key+1}}</th>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->birthday}}</td>
-                                        <td>{{$item->nationality}}</td>
+                                        <td width="150px">{{$item->nationality}}</td>
                                         <td>
                                             <img src="{{ asset('storage/img/'.$item->image) }}" alt="{{$item->image}}" style="width: 100px">
                                         </td>
@@ -137,6 +137,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{ $dir->links("pagination::bootstrap-4") }}
+
                         </div>
                     </div>
                 </div>

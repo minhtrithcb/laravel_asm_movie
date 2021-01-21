@@ -2870,3 +2870,12 @@ table.dataTable thead td {
 }
 
 /*-------------------- END Offset Sidebar ------------------- */
+
+.shit > iframe {
+    width: 100% !important;
+}
+
+label {
+    /* color: black; */
+    font-weight: bold;
+}

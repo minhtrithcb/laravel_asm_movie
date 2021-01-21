@@ -15,7 +15,7 @@ class DirController extends Controller
      */
     public function index()
     {
-        $dir = director::all();
+        $dir = director::paginate(10);
 
         return view('admin.page.dir.index',['dir' => $dir]);
     }
@@ -137,7 +137,7 @@ class DirController extends Controller
         $director->active = $request->trangthai;
         $director->update();
         return redirect('admin/director')->with('msg', 'Sửa đạo diễn thành công');
-        return dd($request->all());
+        // return dd($request->all());
     }
 
     /**

@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="namphathanh" class="form-label">Năm phát hành</label>
-                                                    <input type="number" class="form-control" id="namphathanh" name="namphathanh" value="{{old('namphathanh')}}" placeholder="Năm phát hành">
+                                                    <input type="month" class="form-control" id="namphathanh" name="namphathanh" value="{{old('namphathanh')}}" placeholder="Năm phát hành">
                                                     @error('namphathanh')<small style="color: #e74c3c">{{$message }}</small>@enderror
                                                 </div>
                                                 <div class="form-group">
@@ -127,7 +127,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="btn btn-info">Lấy đường dẫn phim</div>
+                                        <a href="https://dashboard.jwplayer.com/#/content/list?property=cdfb36de-70bf-11ea-ad56-9afb9ec3d975&pageLength=10&view=list">
+                                        <div class="btn btn-info">Lấy đường dẫn phim</div></a>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                       </form>
                                 </div>
@@ -144,22 +145,22 @@
                                         <th scope="col">STT</th>
                                         <th scope="col">Tên Phim</th>
                                         <th scope="col">năm phát hành</th>
-                                        <th scope="col">Điểm imdb</th>
                                         <th scope="col">Thời lượng</th>
-                                        <th scope="col">lược xem</th>
+                                        <th scope="col">Hình</th>
                                         <th scope="col">Thông tin khác</th>
                                         <th scope="col">action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody >
                                     @foreach ($film as $key => $item)
                                     <tr>
                                         <th scope="row">{{$key+1}}</th>
-                                        <td>{{$item->title}}</td>
+                                        <td style="width: 200px">{{$item->title}}</td>
                                         <td>{{$item->year_release}}</td>
-                                        <td>{{$item->imdb}}</td>
-                                        <td>{{$item->time}}</td>
-                                        <td>{{$item->view}}</td>
+                                        <td>{{$item->time}} phút</td>
+                                        <td>
+                                            <img src="{{ asset('storage/img/'.$item->poster) }}" alt="{{$item->poster}}" style="width: 60px; height: 70px; object-fit: cover">
+                                        </td>
                                         <td>
                                             <a href="admin/filmle/{{$item->id}}" class="btn btn-primary rounded-0">Xem chi tiết</a>
                                         </td>
@@ -177,6 +178,7 @@
                                     @endforeach                     
                                 </tbody>
                             </table>
+                            {{ $film->links("pagination::bootstrap-4") }}
                         </div>
                     </div>
                 </div>
@@ -184,13 +186,4 @@
         </div>
     </div>
 </div>
-<script>
-    $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
-        $(this).closest("li").toggleClass("active", this.checked);
-    });
-
-    $(document).on('click', '.allow-focus', function (e) {
-        e.stopPropagation();
-    });
-</script>
 @endsection

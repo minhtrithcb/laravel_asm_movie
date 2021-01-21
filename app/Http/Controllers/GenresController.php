@@ -16,7 +16,7 @@ class GenresController extends Controller
     public function index()
     {
 
-        $genres = genres::all();
+        $genres = genres::paginate(10);
         return view('admin.page.genres.index', ['genres' => $genres]);
 
     }

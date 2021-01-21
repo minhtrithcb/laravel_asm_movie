@@ -9,7 +9,13 @@
                     <li><a href="" class="a-w">Mới nhất</a></li>
                     <li><a href="" class="a-w">Đăng kí</a></li>
                     <li><a href="" class="a-w">Miễn phí</a></li>
-                    <li><a href="" class="a-w">Thể loại</a></li>
+                    <li><a href="" class="a-w">Thể loại</a>
+                        <ul class="c-dropdown">
+                            @foreach ($genres as $genres)
+                                <li><a href="" class="a-w">{{$genres->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <div class="side-bar col-6 d-flex justify-content-end align-items-center">

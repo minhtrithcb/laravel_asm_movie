@@ -18,7 +18,7 @@ class FilmLeController extends Controller
      */
     public function index()
     {
-        $film = film::all();
+        $film = film::paginate(5);
         $genres = genres::all();
         $dir = director::all();
         return view('admin.page.film.filmle', ['film' => $film, 'genres' => $genres, 'dir' => $dir]);
@@ -43,7 +43,7 @@ class FilmLeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'tenfilm' => 'required|min:7|unique:director,name',
+            'tenfilm' => 'required|unique:film,title',
             'namphathanh' => 'required',
             'diemimdb' => 'required',
             'thoiluong' => 'required',
@@ -54,7 +54,6 @@ class FilmLeController extends Controller
         ],[
             'tenfilm.required' => 'Tên phim không được phép để trống',
             'tenfilm.unique' => 'Tên phim đã bị trùng',
-            'tenfilm.min' => 'Tên phim phải lớn hơn 7 kí tự',
             'namphathanh.required' => 'Năm phát hành không được phép để trống',
             'diemimdb.required' => 'Điểm imdb không được phép để trống',
             'thoiluong.required' => 'Thời lượng không được phép để trống',
@@ -72,7 +71,6 @@ class FilmLeController extends Controller
         $film->link_youtube = $request->linkyoutube;
         $film->link = $request->link;
         $film->content = $request->noidung;
-        $film->des = Str::substr($request->noidung, 0, 30);
 
         $film->dir_id = $request->daodien;
 
@@ -93,6 +91,7 @@ class FilmLeController extends Controller
         $film->save();
         $film->genres()->attach($request->theloai);
 
+        
         return redirect('admin/filmle')->with('msg', 'Thêm phim thành công');
     }
 
@@ -122,9 +121,9 @@ class FilmLeController extends Controller
         $film = film::find($id);
         $dir = director::all();
         $gen = genres::all();
-        $x = $film->genres;
-        // return dd($x);
-        return view('admin.page.film.editfilmle', ['film' => $film, 'dir' => $dir, 'gen' => $gen, 'x' => $x]);
+        $filmgenres = $film->genres;
+        $data = ['film' => $film, 'dir' => $dir, 'gen' => $gen, 'filmgenres' => $filmgenres];
+        return view('admin.page.film.editfilmle', $data);
     }
 
     /**
@@ -136,7 +135,53 @@ class FilmLeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $film = film::find($id);
+
+        $request->validate([
+            'tenphim' => 'required',
+            'namphathanh' => 'required',
+            'imdb' => 'required',
+            'thoiluong' => 'required',
+            'noidung' => 'required',
+
+        ],[
+            'tenphim.required' => 'Tên phim không được phép để trống',
+            'namphathanh.required' => 'Năm phát hành không được phép để trống',
+            'imdb.required' => 'Điểm imdb không được phép để trống',
+            'thoiluong.required' => 'Thời lượng không được phép để trống',
+            'noidung.required' => 'Nội dung không được phép để trống',
+        ]);        
+
+        $film->title = $request->tenphim;
+        $film->slug = Str::of($request->tenphim)->slug('-');
+        $film->year_release	= $request->namphathanh;
+        $film->imdb = $request->imdb;
+        $film->time = $request->thoiluong;
+        $film->link_youtube = $request->linkyoutube;
+        $film->link = $request->link;
+        $film->content = $request->noidung;
+
+        $film->dir_id = $request->daodien;
+
+        if ($request->hasFile('poster')) {
+            $mypath = 'public/img';
+            $imagename = $request->file('poster')->getClientOriginalName();
+            $request->file('poster')->storeAs($mypath,$imagename);
+            $film->poster = $imagename;
+        }
+
+        if ($request->hasFile('wallpaper')) {
+            $mypath = 'public/img';
+            $imagename = $request->file('wallpaper')->getClientOriginalName();
+            $request->file('wallpaper')->storeAs($mypath,$imagename);
+            $film->wallpaper = $imagename;
+        }
+
+        
+        $film->genres()->sync($request->theloai);
+        $film->update();
+        // return dd($hasGenres);
+        return redirect('admin/filmle')->with('msg', 'Sửa phim thành công');
     }
 
     /**

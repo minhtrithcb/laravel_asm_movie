@@ -13,55 +13,45 @@
 @section('content')
 
 <div class="main-content-inner">
-    <div class="  mt-3">
+    <div class="  mt-3 d-flex justify-content-between">
         <a href="admin/filmle"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <!-- overview area start -->
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <div class="row d-flex justify-content-between align-items-center pl-3 pr-3" style="height: 70px; ">
-                        <h4 class="header-title m-0">Thông tin chi tiết</h4>
-                    </div>
-                    {{-- === table === --}}
-                    <div class="single-table">
-                        <div class="table-responsive">
-                            <table class="table text-center">
-                                <thead class="text-uppercase" style="background-color: #303641">
-                                    <tr class="text-white">
-                                        <th scope="col" width="200px">Đường dẫn</th>
-                                        <th scope="col" width="200px">Link youtube</th>
-                                        <th scope="col" width="200px">Nội dung</th>
-                                        <th scope="col"  width="150px">Hình</th>
-                                        <th scope="col" width="150px">Hình slide</th>
-                                        <th scope="col">Thể loại</th>
-                                        <th scope="col">Đạo diễn</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>{{$film->link}}</td>
-                                        <td>{{$film->link_youtube}}</td>
-                                        <td>{{$film->content}} ...</td>
-                                        {{-- <td>{{Str::substr($film->content, 0, 100)}} ...</td> --}}
-                                        <td>
-                                            <img src="{{ asset('storage/img/'.$film->poster) }}" alt="">
-                                        </td>
-                                        <td>
-                                            <img src="{{ asset('storage/img/'.$film->wallpaper) }}" alt="">
-                                        </td>
-                                        <td>
-                                            <ul>
-                                            @foreach ($gen as $item)
-                                                <li>{{$item->name}}</li>
-                                            @endforeach
-                                            </ul>
-                                        </td>
-                                        <td>{{$dir->name}}</td>
-                                    </tr>                                   
-                                </tbody>
-                            </table>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="{{ asset('storage/img/'.$film->poster) }}" alt="">
+                            <div class="row d-flex align-items-center justify-content-between p-3">
+                                <button type="button" class="btn btn-primary" style="width: 48%" data-bs-toggle="modal" data-bs-target="#addmodel1x">Xem phim</button>
+                                <button type="button" class="btn btn-primary" style="width: 48%" data-bs-toggle="modal" data-bs-target="#addmodel2x">Xem trailer</button>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h1>{{$film->title}}</h1>
+                                <a href="admin/filmle/{{$film->id}}/edit"><button class="btn btn-primary">Chỉnh sửa</button></a>
+                            </div>
+                            <div class="mt-3 d-flex align-items-center  p-0">
+                                <div class="btn btn-danger p-1 pl-2 pr-2 mr-5" style="height: 30px;">Điểm IMDB: {{$film->imdb}}</div>
+                                <div class="mr-5"><span>Năm: </span>{{$film->year_release}}</div>
+                                <div class="mr-5"><span>Thời lượng: </span>{{$film->time}} phút</div>
+                                <div >{{$film->view}} lược xem</div>
+                            </div>
+                            <div class="mt-3 p-0">
+                                <b style="font-size: 1rem">Thể loại: </b>
+                                @foreach ($gen as $item)
+                                    <a href="" class="p-2">{{$item->name}}</a>
+                                @endforeach
+                            </div>
+                            <hr>
+                            <p style="font-size: 1.1rem" class="mb-3">Nội Dung:</p>
+                            <div class=""> {{$film->content}} </div>
+                            <div class="mt-4">
+                                <img src="{{ asset('storage/img/'.$film->wallpaper) }}" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,4 +59,39 @@
         </div>
     </div>
 </div>
+
+{{-- model 1 --}}
+<div class="modal fade" id="addmodel1x">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" >
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title">Xem Phim</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                @php
+                    echo $film->link;
+                @endphp
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- model 2 --}}
+<div class="modal fade" id="addmodel2x">
+    <div class="modal-dialog modal-dialog-centered  mw-100 w-50" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title">Xem trailer</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center w-100 shit">
+                @php
+                    echo $film->link_youtube;
+                @endphp
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

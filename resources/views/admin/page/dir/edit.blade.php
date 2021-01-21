@@ -34,7 +34,7 @@
 
                         <div class="form-group">
                             <label for="namsinh" class="form-label">Năm sinh</label>
-                            <input type="number" class="form-control" id="namsinh" name="namsinh" value="{{$dir->birthday}}">
+                            <input type="text" class="form-control" id="namsinh" name="namsinh" value="{{$dir->birthday}}">
                             @error('namsinh') <small style="color: #e74c3c">{{$message }}</small>@enderror
                         </div>
 

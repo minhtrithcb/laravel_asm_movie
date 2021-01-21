@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FilmLeController;
 use App\Http\Controllers\GenresController;
 use App\Http\Controllers\DirController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,16 @@ use App\Http\Controllers\DirController;
 |
 */
 
-Route::get('/', function () {
-    return view('page.index');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('phim/{slug}', [HomeController::class, 'slug']);
+// admin
+
+
+
+Route::get('admin', function () {
+    return view('admin.page.index');
 });
 
-// admin
 Route::group(['prefix' => 'admin'], function() {
     // Quản lý phim
     Route::resource('filmle', FilmLeController::class);
@@ -34,7 +40,5 @@ Route::group(['prefix' => 'admin'], function() {
     Route::resource('director', DirController::class);    
 });
 
-Route::get('admin', function () {
-    return view('admin.page.index');
-});
+
 

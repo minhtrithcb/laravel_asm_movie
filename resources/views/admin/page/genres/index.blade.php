@@ -103,6 +103,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{ $genres->links("pagination::bootstrap-4") }}
+
                         </div>
                     </div>
                 </div>
