@@ -1,11 +1,10 @@
 <?php
 
 use App\Http\Controllers\ActorController;
-use App\Http\Controllers\FilmBoController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FilmLeController;
 use App\Http\Controllers\GenresController;
 use App\Http\Controllers\DirController;
+use App\Http\Controllers\FilmController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -31,8 +30,7 @@ Route::get('admin', function () {
 
 Route::group(['prefix' => 'admin'], function() {
     // Quản lý phim
-    Route::resource('filmle', FilmLeController::class);
-    Route::resource('filmbo', FilmBoController::class);
+    Route::resource('film', FilmController::class);
 
     // Quản lý thể loại
     Route::resource('genres', GenresController::class);    

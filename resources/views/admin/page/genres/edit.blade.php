@@ -13,7 +13,7 @@
 @section('content')
 <div class="main-content-inner">
     <div class="  mt-3">
-        <a href="admin/genres"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{ route('genres.index') }}"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <div class="row mt-3">
         <div class="col">
@@ -24,7 +24,7 @@
                     </div>
                     
                       {{-- ===== POST UPDATE ===== --}}
-                      <form action="admin/genres/{{$genres->id}}" method="POST" id="addgenres">
+                      <form action="{{ route('genres.update',$genres->id)}}" method="POST" id="addgenres">
                         @method('put')
                         @csrf
                         <div class="form-group">

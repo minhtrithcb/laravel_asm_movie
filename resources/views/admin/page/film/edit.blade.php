@@ -2,7 +2,7 @@
 
 @section('breadcrumbs')
 <div class="breadcrumbs-area clearfix">
-    <h4 class="page-title pull-left">Quản lý Phim lẻ</h4>
+    <h4 class="page-title pull-left">Quản lý Phim</h4>
     <ul class="breadcrumbs pull-left">
         <li><a href="/">Dashboard</a></li>
         <li><span>Chỉnh sửa Phim</span></li>
@@ -13,17 +13,17 @@
 @section('content')
 <div class="main-content-inner">
     <div class="  mt-3">
-        <a href="admin/filmle"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{route('film.index')}}"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <div class="row mt-3">
         <div class="col">
             <div class="card">
                 <div class="card-body">
                     <div class="row d-flex justify-content-between align-items-center pl-3 pr-3" style="height: 70px; ">
-                        <h4 class="header-title m-0">Chỉnh sửa Phim lẻ</h4>
+                        <h4 class="header-title m-0">Chỉnh sửa Phim</h4>
                     </div>
-                      {{-- ===== POST UPDATE ===== --}}
-                      <form action="admin/filmle/{{$film->id}}" method="post" id="adddir" enctype="multipart/form-data">
+                      {{-- ===== PUT UPDATE ===== --}}
+                      <form action="{{ route('film.update',$film->id) }}" method="post" id="adddir" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="row">

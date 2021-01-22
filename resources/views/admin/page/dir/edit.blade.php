@@ -23,7 +23,7 @@
                         <h4 class="header-title m-0">Chỉnh sửa Đạo diễn</h4>
                     </div>
                       {{-- ===== POST UPDATE ===== --}}
-                      <form action="admin/director/{{$dir->id}}" method="POST" id="adddir" enctype="multipart/form-data">
+                      <form action="{{route('director.update',$dir->id)}}" method="POST" id="adddir" enctype="multipart/form-data">
                         @method('put')
                         @csrf
                         <div class="row">

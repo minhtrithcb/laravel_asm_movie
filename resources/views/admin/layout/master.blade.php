@@ -84,7 +84,7 @@
                             <h4 class="user-name dropdown-toggle" style="color: black" data-toggle="dropdown"><b style="color: #e74c3c">Võ Minh Trí</b>  <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Thông tin</a>
-                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Cài đặt</a>
                                 <a class="dropdown-item" href="#">Log Out</a>
                             </div>
                         </div>

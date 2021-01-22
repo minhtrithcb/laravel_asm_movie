@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="modal-body">
                                         {{-- ===== POST ADD ===== --}}
-                                        <form action="admin/director" method="POST" enctype="multipart/form-data">
+                                        <form action="{{route('director.store')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col">
@@ -124,12 +124,12 @@
                                                 <span class="badge bg-danger text-white">Đang Ẩn</span></td>
                                             @endif
                                         <td>
-                                            <form action="admin/director/{{$item->id}}" method="post" style="display: inline">
+                                            <form action="{{ route('director.destroy',$item->id)}}" method="post" style="display: inline">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button class="btn btn-danger rounded-0" onclick="return confirm('Bạn có muốn xóa không')">Xóa</button>
                                             </form> 
-                                            <a href="admin/director/{{$item->id}}/edit">
+                                            <a href="{{ route('director.edit',$item->id)}}">
                                                 <div class="btn btn-info rounded-0">Sửa</div>
                                             </a>
                                         </td>

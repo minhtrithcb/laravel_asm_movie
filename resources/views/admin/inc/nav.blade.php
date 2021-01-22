@@ -8,24 +8,23 @@
                 Quản lý phim
             </span></a>
             <ul class="collapse">
-                <li><a href="admin/filmle">Phim lẻ</a></li>
-                <li><a href="admin/filmbo">Phim bộ</a></li>
+                <li><a href="{{route('film.index')}}">Phim</a></li>
             </ul>
         </li>
     
         <li  class="{{ 'admin/genres' == request()->path() ? 'active' : ''}}">
-            <a href="admin/genres" aria-expanded="true"><i class="ti-palette"></i><span>Quản lí thể loại</span></a>
+            <a href="{{ route('genres.index') }}" aria-expanded="true"><i class="ti-palette"></i><span>Quản lí thể loại</span></a>
         </li>
 
         <li  class="{{ 'admin/director' == request()->path() ? 'active' : ''}}">
-            <a href="admin/director" aria-expanded="true"><i class="ti-receipt"></i><span>Quản lí đạo diễn</span></a>
+            <a href="{{ route('director.index') }}" aria-expanded="true"><i class="ti-receipt"></i><span>Quản lí đạo diễn</span></a>
         </li>
 
         <li  class="{{ 'admin/actor' == request()->path() ? 'active' : ''}}">
-            <a href="admin/actor" aria-expanded="true"><i class="ti-pie-chart"></i><span>Quản lí diễn viên</span></a>
+            <a href="{{ route('actor.index') }}" aria-expanded="true"><i class="ti-pie-chart"></i><span>Quản lí diễn viên</span></a>
         </li>
         
-        <li>
+        {{-- <li>
             <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
                 <span>Tables</span></a>
             <ul class="collapse">
@@ -33,7 +32,7 @@
                 <li><a href="table-layout.html">table layout</a></li>
                 <li><a href="datatable.html">datatable</a></li>
             </ul>
-        </li>
+        </li> --}}
        
     </ul>
 </nav>

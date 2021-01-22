@@ -5,7 +5,7 @@
     <h4 class="page-title pull-left">Quản lí phim</h4>
     <ul class="breadcrumbs pull-left">
         <li><a href="/">Dashboard</a></li>
-        <li><span>Quản lí phim lẻ</span></li>
+        <li><span>Quản lí phim</span></li>
     </ul>
 </div>
 @endsection
@@ -24,8 +24,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row d-flex justify-content-between align-items-center pl-3 pr-3" style="height: 70px; ">
-                        <h4 class="header-title m-0">Danh sách phim lẻ</h4>
-                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#addmodel1">Thêm Phim lẻ</button>
+                        <h4 class="header-title m-0">Danh sách phim </h4>
+                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#addmodel1">Thêm Phim </button>
                     </div>
                     <!-- Modal -->
                     @if ($errors->any())
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="modal-body">
                                     {{-- ===== POST ADD ===== --}}
-                                    <form action="admin/filmle" method="POST" id="addgenres" enctype="multipart/form-data">
+                                    <form action="{{ route('film.store') }}" method="POST" id="addgenres" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col">
@@ -180,15 +180,15 @@
                                             <img src="{{ asset('storage/img/'.$item->poster) }}" alt="{{$item->poster}}" style="width: 60px; height: 70px; object-fit: cover">
                                         </td>
                                         <td>
-                                            <a href="admin/filmle/{{$item->id}}" class="btn btn-primary rounded-0">Xem chi tiết</a>
+                                            <a href="{{ route('film.show',$item->id) }}" class="btn btn-primary rounded-0">Xem chi tiết</a>
                                         </td>
                                         <td>
-                                            <form action="admin/filmle/{{$item->id}}" method="post" style="display: inline"> 
+                                            <form action=" {{ route('film.destroy',$item->id)}}" method="post" style="display: inline"> 
                                                 @method('DELETE')
                                                 @csrf
                                                 <button class="btn btn-danger rounded-0" onclick="return confirm('Bạn có muốn xóa không')">Xóa</button>
                                             </form>
-                                            <a href="admin/filmle/{{$item->id}}/edit">
+                                            <a href="{{ route('film.edit',$item->id)}} ">
                                                 <div class="btn btn-info rounded-0">Sửa</div>
                                             </a>
                                         </td>

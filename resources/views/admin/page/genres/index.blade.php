@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="modal-body">
                                         {{-- ===== POST ADD ===== --}}
-                                        <form action="admin/genres" method="POST" id="addgenres">
+                                        <form action="{{ route('genres.store') }}" method="POST" id="addgenres">
                                             @csrf
                                             <div class="form-group">
                                               <label for="tentheloai" class="form-label">Tên Thể loại</label>
@@ -90,12 +90,12 @@
                                                 <span class="badge bg-danger text-white">Đang Ẩn</span></td>
                                             @endif
                                         <td>
-                                            <form action="admin/genres/{{$item->id}}" method="post" style="display: inline">
+                                            <form action="{{ route('genres.destroy', $item->id) }}" method="post" style="display: inline">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button class="btn btn-danger rounded-0" onclick="return confirm('Bạn có muốn xóa không')">Xóa</button>
                                             </form>
-                                            <a href="admin/genres/{{$item->id}}/edit">
+                                            <a href="{{ route('genres.edit', $item->id)}}">
                                                 <div class="btn btn-info rounded-0">Sửa</div>
                                             </a>
                                         </td>
@@ -104,7 +104,6 @@
                                 </tbody>
                             </table>
                             {{ $genres->links("pagination::bootstrap-4") }}
-
                         </div>
                     </div>
                 </div>

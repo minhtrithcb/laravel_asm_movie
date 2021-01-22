@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\filmstore;
+use App\Http\Requests\filmupdate;
 use App\Models\director;
 use App\Models\film;
 use App\Models\genres;
@@ -9,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 
-class FilmLeController extends Controller
+class FilmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +23,7 @@ class FilmLeController extends Controller
         $film = film::paginate(5);
         $genres = genres::all();
         $dir = director::all();
-        return view('admin.page.film.filmle', ['film' => $film, 'genres' => $genres, 'dir' => $dir]);
+        return view('admin.page.film.index', ['film' => $film, 'genres' => $genres, 'dir' => $dir]);
     }
 
     /**
@@ -40,28 +42,8 @@ class FilmLeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(filmstore $request)
     {
-        $request->validate([
-            'tenfilm' => 'required|unique:film,title',
-            'namphathanh' => 'required',
-            'diemimdb' => 'required',
-            'thoiluong' => 'required',
-            'noidung' => 'required',
-            'poster' => 'required',
-            'wallpaper' => 'required',
-
-        ],[
-            'tenfilm.required' => 'Tên phim không được phép để trống',
-            'tenfilm.unique' => 'Tên phim đã bị trùng',
-            'namphathanh.required' => 'Năm phát hành không được phép để trống',
-            'diemimdb.required' => 'Điểm imdb không được phép để trống',
-            'thoiluong.required' => 'Thời lượng không được phép để trống',
-            'noidung.required' => 'Nội dung không được phép để trống',
-            'poster.required' => 'Poster không được phép để trống',
-            'wallpaper.required' => 'Wallpaper không được phép để trống',
-        ]);
-
         $film = new film;
         $film->title = $request->tenfilm;
         $film->slug = Str::of($request->tenfilm)->slug('-');
@@ -92,7 +74,7 @@ class FilmLeController extends Controller
         $film->genres()->attach($request->theloai);
 
         
-        return redirect('admin/filmle')->with('msg', 'Thêm phim thành công');
+        return redirect('admin/film')->with('msg', 'Thêm phim thành công');
     }
 
     /**
@@ -107,7 +89,7 @@ class FilmLeController extends Controller
         $dir = director::find($film->dir_id);
         $gen = $film->genres;
         // return dd($gen);
-        return view('admin.page.film.filmledetail', ['film' => $film , 'dir' => $dir, 'gen' => $gen]);
+        return view('admin.page.film.detail', ['film' => $film , 'dir' => $dir, 'gen' => $gen]);
     }
 
     /**
@@ -123,7 +105,7 @@ class FilmLeController extends Controller
         $gen = genres::all();
         $filmgenres = $film->genres;
         $data = ['film' => $film, 'dir' => $dir, 'gen' => $gen, 'filmgenres' => $filmgenres];
-        return view('admin.page.film.editfilmle', $data);
+        return view('admin.page.film.edit', $data);
     }
 
     /**
@@ -133,24 +115,9 @@ class FilmLeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(filmupdate $request, $id)
     {
-        $film = film::find($id);
-
-        $request->validate([
-            'tenphim' => 'required',
-            'namphathanh' => 'required',
-            'imdb' => 'required',
-            'thoiluong' => 'required',
-            'noidung' => 'required',
-
-        ],[
-            'tenphim.required' => 'Tên phim không được phép để trống',
-            'namphathanh.required' => 'Năm phát hành không được phép để trống',
-            'imdb.required' => 'Điểm imdb không được phép để trống',
-            'thoiluong.required' => 'Thời lượng không được phép để trống',
-            'noidung.required' => 'Nội dung không được phép để trống',
-        ]);        
+        $film = film::find($id);     
 
         $film->title = $request->tenphim;
         $film->slug = Str::of($request->tenphim)->slug('-');
@@ -181,7 +148,7 @@ class FilmLeController extends Controller
         $film->genres()->sync($request->theloai);
         $film->update();
         // return dd($hasGenres);
-        return redirect('admin/filmle')->with('msg', 'Sửa phim thành công');
+        return redirect('admin/film')->with('msg', 'Sửa phim thành công');
     }
 
     /**
@@ -193,6 +160,6 @@ class FilmLeController extends Controller
     public function destroy($id)
     {
         film::find($id)->delete();
-        return redirect('admin/filmle')->with('msg', 'Xóa phim thành công');
+        return redirect()->back()->with('msg', 'Xóa phim thành công');
     }
 }

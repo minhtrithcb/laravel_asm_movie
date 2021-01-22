@@ -14,7 +14,7 @@
 
 <div class="main-content-inner">
     <div class="  mt-3 d-flex justify-content-between">
-        <a href="admin/filmle"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{ route('film.index') }}"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <!-- overview area start -->
     <div class="row mt-3">
@@ -32,7 +32,7 @@
                         <div class="col-8">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h1>{{$film->title}}</h1>
-                                <a href="admin/filmle/{{$film->id}}/edit"><button class="btn btn-primary">Chỉnh sửa</button></a>
+                                <a href="{{route('film.edit', $film->id) }}"><button class="btn btn-primary">Chỉnh sửa</button></a>
                             </div>
                             <div class="mt-3 d-flex align-items-center  p-0">
                                 <div class="btn btn-danger p-1 pl-2 pr-2 mr-5" style="height: 30px;">Điểm IMDB: {{$film->imdb}}</div>

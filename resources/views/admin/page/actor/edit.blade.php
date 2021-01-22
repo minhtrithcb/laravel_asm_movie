@@ -13,7 +13,7 @@
 @section('content')
 <div class="main-content-inner">
     <div class="  mt-3">
-        <a href="admin/actor"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{ route('actor.index') }}"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <div class="row mt-3">
         <div class="col">
@@ -23,7 +23,7 @@
                         <h4 class="header-title m-0">Chỉnh sửa diễn viên</h4>
                     </div>
                       {{-- ===== POST UPDATE ===== --}}
-                      <form action="admin/actor/{{$actor->id}}" method="POST" id="addactor" enctype="multipart/form-data">
+                      <form action="{{ route('actor.update',$actor->id)}}" method="POST" id="addactor" enctype="multipart/form-data">
                         @method('put')
                         @csrf
                         <div class="row">

@@ -17,9 +17,9 @@ class HomeController extends Controller
     public function slug($s)
     {
         $f = film::where('slug', $s)->first();        
-        // if ($f == null) {
-        //     return 
-        // }
+        if (!$f) {
+            abort(404);
+        }
 
         return dd($f);
         // return view('page.index',["genres" => $genres]);
