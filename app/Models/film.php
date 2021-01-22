@@ -10,8 +10,6 @@ class film extends Model
     use HasFactory;
 
     protected $table = "film";
-    // public $timestamps = false;
-
 
     public function genres()
     {
