@@ -13,7 +13,8 @@
 @section('content')
 <div class="main-content-inner">
     <div class="  mt-3">
-        <a href="{{route('film.index')}}"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{ url()->previous() }}"><button class="btn btn-primary">Trở về</button></a>
+        {{-- <a href="{{route('film.index')}}"><button class="btn btn-primary">Trở về</button></a> --}}
     </div>
     <div class="row mt-3">
         <div class="col">
@@ -109,27 +110,52 @@
                                     </select>
                                 </div>
         
-                                <div class="form-group">
-                                    <label class="">Thể loại:</label>
-                                    <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" 
-                                                id="dropdownMenu1" data-toggle="dropdown" 
-                                                aria-haspopup="true" aria-expanded="true">
-                                          <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
-                                            @foreach ($gen as $key => $item)                                            
+                                <div class="row">
+                                    <div class="form-group col-3">
+                                        <label class="">Thể loại:</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" 
+                                                    id="dropdownMenu1" data-toggle="dropdown" 
+                                                    aria-haspopup="true" aria-expanded="true">
+                                              <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+                                                @foreach ($gen as $key => $item)                                            
+                                                    <li ><span>
+                                                        <input type="checkbox" value="{{$item->id}}" id="check{{$key}}" name="theloai[]" 
+                                                        @foreach ($filmgenres as $i)
+                                                            @if ($i->id == $item->id) checked @endif  
+                                                        @endforeach >
+                                                        <label style="display: inline" class="form-check-label" for="check{{$key}}">{{$item->name}}</label>
+                                                    </span></li> 
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+    
+                                    <div class="form-group col-3">
+                                        <label class="">Diễn viên:</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" 
+                                                    id="dropdownMenu2" data-toggle="dropdown" 
+                                                    aria-haspopup="true" aria-expanded="true">
+                                              <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu2" style="width: 250px !important">
+                                                @foreach ($actor as $key => $item)
                                                 <li ><span>
-                                                    <input type="checkbox" value="{{$item->id}}" id="check{{$key}}" name="theloai[]" 
-                                                    @foreach ($filmgenres as $i)
-                                                        @if ($i->id == $item->id) checked @endif  
-                                                    @endforeach >
-                                                    <label style="display: inline" class="form-check-label" for="check{{$key}}">{{$item->name}}</label>
-                                                </span></li> 
-                                            @endforeach
-                                        </ul>
+                                                    <input type="checkbox" value="{{$item->id}}" id="checkw{{$key}}" name="dienvien[]"
+                                                        @foreach ($filmactor as $i)
+                                                            @if ($i->id == $item->id) checked @endif
+                                                        @endforeach >
+                                                    <label style="display: inline" class="form-check-label" for="checkw{{$key}}">{{$item->name}}</label>
+                                                </span></li>
+                                              @endforeach
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
 

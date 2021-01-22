@@ -14,7 +14,7 @@
 
 <div class="main-content-inner">
     <div class="  mt-3 d-flex justify-content-between">
-        <a href="{{ route('film.index') }}"><button class="btn btn-primary">Trở về</button></a>
+        <a href="{{ url()->previous() }}"><button class="btn btn-primary">Trở về</button></a>
     </div>
     <!-- overview area start -->
     <div class="row mt-3">
@@ -49,8 +49,22 @@
                             <hr>
                             <p style="font-size: 1.1rem" class="mb-3">Nội Dung:</p>
                             <div class=""> {{$film->content}} </div>
+
                             <div class="mt-4">
                                 <img src="{{ asset('storage/img/'.$film->wallpaper) }}" alt="">
+                            </div>
+
+                            <hr>
+                            <p style="font-size: 1.1rem" class="mb-3">Diễn viên:</p>
+                            <div class="row"> 
+                                @foreach ($actor as $item)
+                                <div class="card col-3">
+                                    <img src="{{ asset('storage/img/' . $item->image)}}" class="card-img-top" style="height: 200px ; object-fit: cover">
+                                    <div class="card-body">
+                                        <h6 class="card-title">{{$item->name}}</h6>
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

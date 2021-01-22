@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\filmstore;
 use App\Http\Requests\filmupdate;
+use App\Models\actor;
 use App\Models\director;
 use App\Models\film;
 use App\Models\genres;
@@ -23,7 +24,10 @@ class FilmController extends Controller
         $film = film::paginate(5);
         $genres = genres::all();
         $dir = director::all();
-        return view('admin.page.film.index', ['film' => $film, 'genres' => $genres, 'dir' => $dir]);
+        $actor = actor::all();
+
+        $data = ['film' => $film, 'genres' => $genres, 'dir' => $dir, 'actor' => $actor];
+        return view('admin.page.film.index', $data);
     }
 
     /**
@@ -72,6 +76,7 @@ class FilmController extends Controller
 
         $film->save();
         $film->genres()->attach($request->theloai);
+        $film->actor()->attach($request->dienvien);
 
         
         return redirect('admin/film')->with('msg', 'Thêm phim thành công');
@@ -88,8 +93,10 @@ class FilmController extends Controller
         $film = film::find($id);
         $dir = director::find($film->dir_id);
         $gen = $film->genres;
+        $actor = $film->actor;
+        $data = ['film' => $film , 'dir' => $dir, 'gen' => $gen , 'actor' => $actor];
         // return dd($gen);
-        return view('admin.page.film.detail', ['film' => $film , 'dir' => $dir, 'gen' => $gen]);
+        return view('admin.page.film.detail', $data);
     }
 
     /**
@@ -103,8 +110,20 @@ class FilmController extends Controller
         $film = film::find($id);
         $dir = director::all();
         $gen = genres::all();
+        $actor = actor::all();
         $filmgenres = $film->genres;
-        $data = ['film' => $film, 'dir' => $dir, 'gen' => $gen, 'filmgenres' => $filmgenres];
+        $filmactor = $film->actor;
+
+        $data = [
+            'film' => $film, 
+            'dir' => $dir, 
+            'gen' => $gen, 
+            'filmgenres' => $filmgenres, 
+            'actor' => $actor ,
+            'filmactor' => $filmactor
+        ];
+
+        // return dd($data);
         return view('admin.page.film.edit', $data);
     }
 
@@ -146,6 +165,7 @@ class FilmController extends Controller
 
         
         $film->genres()->sync($request->theloai);
+        $film->actor()->sync($request->dienvien);
         $film->update();
         // return dd($hasGenres);
         return redirect('admin/film')->with('msg', 'Sửa phim thành công');

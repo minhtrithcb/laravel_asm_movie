@@ -17,8 +17,8 @@ class CreateFilmActorTable extends Migration
             $table->id();
             $table->unsignedBigInteger('film_id');
             $table->unsignedBigInteger('actor_id');
-            $table->foreign('film_id')->references('id')->on('film');
-            $table->foreign('actor_id')->references('id')->on('actor');
+            $table->foreign('film_id')->references('id')->on('film')->onDelete('cascade');;
+            $table->foreign('actor_id')->references('id')->on('actor')->onDelete('cascade');;
         });
     }
 

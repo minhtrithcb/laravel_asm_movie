@@ -20,6 +20,6 @@ class film extends Model
 
     public function actor()
     {
-        return $this->belongsToMany(actor::class);
+        return $this->belongsToMany(actor::class, 'film_actor');
     }
 }

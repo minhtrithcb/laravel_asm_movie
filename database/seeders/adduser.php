@@ -13,6 +13,6 @@ class adduser extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

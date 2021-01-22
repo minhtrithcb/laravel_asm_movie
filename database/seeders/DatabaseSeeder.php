@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([addgenres::class]);
         $this->call([addfilm::class]);
         $this->call([addactor::class]);
+        $this->call([addfilmgenres::class]);
+        $this->call([addfilmactor::class]);
     }
 }
